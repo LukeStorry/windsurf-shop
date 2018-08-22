@@ -1,0 +1,38 @@
+{
+  "name": "windsurfshop",
+  "version": "0.8.2",
+  "description": "A simple web shop written for the University of Bristol’s COMS32500 Web Technologies unit.",
+  "man": "./README.md",
+  "homepage": "https://windsurf-shop.herokuapp.com",
+  "repo": "https://github.com/LukeStorry/windsurf-shop",
+  "license": "MIT",
+  "author": "Luke Storry",
+  "private": true,
+  "scripts": {
+    "start": "node ./server.js",
+    "devstart": "nodemon ./server.js",
+    "deploy": "git push heroku master",
+    "reset-database": "rm ./db/database.db ./db/sessions.db; sqlite3 ./db/database.db < ./db/reset-database.sql",
+    "update-products": "sqlite3 ./db/database.db < ./db/update-products.sql",
+    "check-database": "sqlite3 ./db/database.db '.schema' 'SELECT email from users; SELECT name from products'"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "connect-flash": "^0.1.1",
+    "connect-sqlite3": "^0.9.11",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "express": "~4.16.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.6",
+    "nodemon": "^1.18.3"
+  }
+}

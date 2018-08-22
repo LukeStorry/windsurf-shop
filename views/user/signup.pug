@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  br
+  .row
+    .col-md-4.offset-md-2
+      h1 #{subtitle}
+      br
+      for message in messages
+        .alert.alert-danger= message
+      form(action="/user/signup" method="post")
+        .form-group
+          label(for="firstname") First Name
+          input.form-control(type="text", id="firstname", name="firstname")
+        .form-group
+          label(for="surname") Surname
+          input.form-control(type="text", id="surname", name="surname")
+        .form-group
+          label(for="email") Email
+          input.form-control(type="text", id="email", name="email")
+        .form-group
+          label(for="password") Password
+          input.form-control(type="password", id="password", name="password")
+          input.form-control(type="hidden", name="_csrf", value=csrfToken)
+        button.btn.btn-primary(type="submit") #{subtitle}
+
+      br
+
+      | Already got an account?  Sign in 
+      a(href="/user/signin") here
+      |.

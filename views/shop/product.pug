@@ -1,0 +1,26 @@
+
+extends ../layout
+include ../components/cards
+
+block content
+  //- product page, shows product details of one product
+  .container
+    if product
+      .row
+        .offset-md-2
+          h1= product.name
+      .row
+        .col-md-6
+          img(src=product.imgPath, alt='Image of a ' + product.name)
+        .col-md-5.offset-md-1
+          p= product.description  
+          br 
+          br
+          p £#{product.price}
+          a.btn.btn-info(href="/cart/add/"+product.id, role=button) Add to cart
+
+
+
+    else
+
+      strong  Sorry, that product cannot be found

@@ -1,0 +1,22 @@
+.bg-blue {
+  background-color: #42abcd;
+}
+
+.logo {
+  height: 2.2em;
+  padding: 0px 20px 5px 15px
+}
+
+.card .price {
+  padding: 5px 10px 0px 0px;
+  text-align: right;
+  color: #FFF
+}
+
+.card-img-top {
+  padding: 30px 30px 30px 30px
+}
+
+.search-button-img {
+  height: 20px;
+}

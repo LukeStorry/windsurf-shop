@@ -1,0 +1,18 @@
+
+mixin cartitem(item)
+  //- card for the cart, showing one product with quantity editing buttons
+  li.list-group-item
+    .row
+      .col-3
+        strong  #{item.product.name}   
+      .col-3
+        a(href="/products/" + item.product.id)
+          img(src=item.product.imgPath, alt='Image of a ' + item.product.name, height=80)
+      .col-2
+        span.label.label-success £#{item.product.price} 
+
+      .col-4
+        .btn-group
+          a.btn.btn-info.btn-sm(role="button" href='/cart/reduce/'+item.product.id) - 
+          button.btn.btn-info(disabled) #{item.quantity} 
+          a.btn.btn-info.btn-sm(role="button" href='/cart/increase/'+item.product.id)  +

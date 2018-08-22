@@ -1,0 +1,8 @@
+extends ../layout
+include ../components/cards
+
+block content
+  h1 #{subtitle}
+
+  h3 Hello #{user.firstname}
+  p Your registered email is #{user.email}

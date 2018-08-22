@@ -1,0 +1,62 @@
+//- variety of mixins for constructing a navbar
+
+mixin navbar()
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-blue.sticky-top
+
+    a.navbar-brand(href='/')
+      img.logo(src="/images/logo.png", alt="logo") 
+      | #{brandname}
+
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls="navbarCollapse", aria-expanded='false', aria-label='Toggle navbar')
+      span.navbar-toggler-icon
+
+    .collapse.navbar-collapse(id="navbarCollapse")
+      block 
+
+mixin navbar_group
+  .navbar-nav.mr-auto
+    block 
+
+mixin navbar_item(text, href)
+  if text === subtitle
+    .nav-item.active
+      a.nav-link(href=href)= text
+        span.sr-only (current page)
+  else
+    .nav-item
+      a.nav-link(href=href)= text
+  block
+
+mixin navbar_cart(href)
+  .nav-item
+    a.nav-link(href=href)
+      i.fas.fa-shopping-cart
+      if session && session.cart
+        .badge #{session.cart.totalQuantity}
+  block
+
+
+mixin navbar_search
+  form.form-inline(action="/products/search/", method="get")
+    input.form-control(type='search', name='s', placeholder='Search', aria-label='Search')
+    button.btn.btn-outline-info.bg-white.float-right(type='submit')
+      img.search-button-img(src="/images/logo.png", alt="Search")
+
+
+mixin navbar_dropdown(text, href)
+  .nav-item.dropdown
+    a.nav-link.dropdown-toggle(href=href, role='button', id="navbarDropdown-"+text, data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      if text === "User"
+        i.fas.fa-user-circle
+      else
+        =text
+    .dropdown-menu(aria-labelledby="navbarDropdown-"+text)
+      block
+
+mixin navbar_dropdown_item(text, href)
+  if text === subtitle
+    a.dropdown-item.active(href=href)= text
+      span.sr-only (current)
+  else
+    a.dropdown-item(href=href)= text
+  block

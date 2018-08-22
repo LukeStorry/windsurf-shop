@@ -1,0 +1,28 @@
+
+extends ../layout
+include ../components/cartitem
+
+block content
+  //- cart page - uses the stored session cart
+
+  if session.cart && session.cart.items.length > 0
+    .container
+      .row
+        .col-md-6.offset-sm-3
+          h1 #{subtitle}
+          ul.list-group
+            for item in session.cart.items
+              +cartitem(item)
+
+      hr
+      .row
+        .col-3.offset-4
+          h3 Total: #{session.cart.totalPrice}   
+        .col-2
+          a.btn.btn-success(href='/checkout' role="button") Checkout
+  else
+    .container
+      .row
+        .col-sm-6.offset-sm-3
+          br
+          h2 Cart is currently empty

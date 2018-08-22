@@ -1,0 +1,17 @@
+
+extends ../layout
+include ../components/cards
+
+block content
+  //- store front and search results page, makes grid out of an array of products
+  h1= subtitle
+  p= message
+
+  .container
+    .row
+      if products
+        for product in products
+          +product_card(product)
+      else
+        br
+        strong  Sorry, no products are available at the moment.

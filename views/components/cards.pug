@@ -1,0 +1,14 @@
+mixin product_card(product)
+  //- card for the main storefront grid, showing one product.
+  .col-lg-3.col-md-4.col-sm-6.col-10.offset-1.offset-sm-0.mb-4
+    .card.h-auto.bg-blue
+      a(href="/products/" + product.id)
+        img.card-img-top(src=product.imgPath, alt='Image of a ' + product.name)
+      .card-body
+        h4.card-title #{product.name}
+      .card-footer
+        .row
+          .col-6
+            a.btn.btn-info.pull-right(href="/cart/add/"+product.id, role=button) Add to cart
+          .col-6
+            .price £#{product.price}
