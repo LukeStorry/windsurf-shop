@@ -1,12 +1,13 @@
 # windsurf-shop
 A simple web store written for the University of Bristol's COMS32500 Web Technologies unit.
 
-[![herokubadge](https://img.shields.io/website-up-down-green-red/http/shields.io.svg?label=windsurf-shop.herokuapp.com)](https://windsurf-shop.herokuapp.com/)
+
+[![herokubadge](https://img.shields.io/website-up-down-green-red/https/windsurf-shop.herokuapp.com.svg?label=Heroku%20Deployment)](https://windsurf-shop.herokuapp.com/)
 [![Licence MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/LukeStorry/windsurf-shop)
-[![License Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLukeStorry%2Fwindsurf-shop.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FLukeStorry%2Fwindsurf-shop?ref=badge_shield)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLukeStorry%2Fwindsurf-shop.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2FLukeStorry%2Fwindsurf-shop?ref=badge_small)
 
-### [![logo](/public/images/logo.png) Live Demo](https://windsurf-shop.herokuapp.com)
+There are a range of windsurfing products dynamically loaded from a database, a user accounts system, a shopping-cart stored in cookies, a search feature, and a design-your-own-sail app.
+### [![logo](/public/images/logo.png) WindsurfShop](https://windsurf-shop.herokuapp.com)
 
 ## Installation
 Simply clone the repo, and install dependencies:
@@ -19,24 +20,24 @@ npm install
 
 ## Usage
 
-`npm start`: runs the server with `node`, head to `http://localhost:3000/` to see it.
+`npm start` runs the server with `node`, head to `http://localhost:3000/` to see it.
 
-`npm run devstart`: same as above, but with `nodemon`, so the server restarts upon file changes.
+`npm run devstart` same as above, but with `nodemon`, so the server restarts upon file changes.
 
-`npm run deploy`: deploys to Heroku, if the remote app has been set up.
+`npm run deploy` deploys to Heroku, if the remote app has been set up.
 
-`npm run reset-database`: removes the database, and instantiates new empty tables.
+`npm run reset-database` removes the database, and instantiates new empty tables.
 
-`npm run update-products`: overwrites the products table in the database with the contents of the products.csv file.
+`npm run update-products` overwrites the products table in the database with the contents of the products.csv file.
 
-`npm run check-database`: outputs the schema and names of items of both the user and products table, to check functionality.
+`npm run check-database` outputs the schema and names of items of both the user and products table, to check functionality.
 
 ## Main Technologies
 Uses a [Node.js](https://nodejs.org) [Express Server](https://expressjs.com/) to deliver XHTML rendered by the [Pug](https://www.npmjs.com/package/pug) templating engine, with adapted [Bootstrap](https://getbootstrap.com) styling.
 
 [Bcrypt](https://www.npmjs.com/package/bcrypt) and [Passport](http://www.passportjs.org/) handles authentication and authorization, with CSRF protection from [csurf](https://www.npmjs.com/package/csurf)
 
-Products and users stored on an SQL server accessed and monitored using [sqlite3](https://www.npmjs.com/package/sqlite3).
+Products and users are stored in an SQL database accessed and monitored using [sqlite3](https://www.npmjs.com/package/sqlite3).
 
 
 
