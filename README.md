@@ -8,7 +8,7 @@ A simple web store, with a range of windsurfing products dynamically loaded from
 
 Originally written for the University of Bristol's COMS32500 Web Technologies unit.
 
-#### Deployed on Heroku: [<img src="public/images/logo.png" height="30"> WindsurfShop](https://windsurf-shop.herokuapp.com)
+#### Deployed on Heroku: [<img src="public/images/logo.png" height="20"> WindsurfShop](https://windsurf-shop.herokuapp.com)
 
 
 
