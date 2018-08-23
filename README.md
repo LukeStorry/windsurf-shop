@@ -1,13 +1,16 @@
 # windsurf-shop
-A simple web store written for the University of Bristol's COMS32500 Web Technologies unit.
+A simple web store, with a range of windsurfing products dynamically loaded from a database, a user accounts system, a shopping-cart stored in cookies, a search feature, and a design-your-own-sail app.
 
 
 [![herokubadge](https://img.shields.io/website-up-down-green-red/https/windsurf-shop.herokuapp.com.svg?label=Heroku%20Deployment)](https://windsurf-shop.herokuapp.com/)
 [![Licence MIT](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/LukeStorry/windsurf-shop)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLukeStorry%2Fwindsurf-shop.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2FLukeStorry%2Fwindsurf-shop?ref=badge_small)
 
-There are a range of windsurfing products dynamically loaded from a database, a user accounts system, a shopping-cart stored in cookies, a search feature, and a design-your-own-sail app.
-### [![logo](/public/images/logo.png) WindsurfShop](https://windsurf-shop.herokuapp.com)
+Originally written for the University of Bristol's COMS32500 Web Technologies unit.
+
+### Deployed on Heroku: [<img src="public/images/logo.png" height="30"> WindsurfShop](https://windsurf-shop.herokuapp.com)
+
+
 
 ## Installation
 Simply clone the repo, and install dependencies:
@@ -42,7 +45,6 @@ Products and users are stored in an SQL database accessed and monitored using [s
 
 
 ## Licenses & Copyright
-
 Products, images, and descriptions are retouched/edited versions of products for sale at [Boardwise](http://www.boardwisecannock.co.uk/windsurfing-c-385.html).
 
 [Express-generator](https://www.npmjs.com/package/express-generator) was used to get up and running ([MIT License](https://opensource.org/licenses/MIT)).
